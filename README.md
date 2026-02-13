@@ -74,13 +74,14 @@ sdmc:/atmosphere/contents/<TITLEID>/exefs_disabled
 
 This project uses **devkitPro** and **libnx**.
 
-### Requirements
+### Requirements (if manually building)
 - devkitPro
 - devkitA64
 - libnx
 
 ### Build
-```bash
+
+Build by running this in the command prompt on your PC:
 make
 
 The resulting .nro can be placed on your SD card:
@@ -89,12 +90,12 @@ sdmc:/switch/OCGM.nro
 
 You can also download a pre-built .nro from the Releases section.
 
-Credits
+### Credits
 Built with libnx (devkitPro)
 
 Console interface powered by ANSI escape codes
 
-Disclaimer
+### Disclaimer
 This application modifies folder names on your SD card.
 Use at your own risk.
 
