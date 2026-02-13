@@ -93,6 +93,8 @@ Built with libnx (devkitPro)
 
 Console interface powered by ANSI escape codes
 
+Made by Jack The Yoshi
+
 ### Disclaimer
 This application modifies folder names on your SD card.
 Use at your own risk.
