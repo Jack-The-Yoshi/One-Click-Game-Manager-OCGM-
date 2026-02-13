@@ -41,7 +41,7 @@ romfs_disabled → romfs
 exefs_disabled → exefs
 
 
-This method does not delete or modify files — it only renames folders.
+This method does not delete or modify files it only renames folders.
 
 ---
 
