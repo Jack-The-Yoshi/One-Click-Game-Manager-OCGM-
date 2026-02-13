@@ -16,8 +16,6 @@ OCGM is designed to be lightweight, fast, and easy to use through a clean consol
   - Mod detection (Enabled / Disabled)
   - Total Mod Size
   - Total File Count
-  - Shows if ROMFS files are there or not and their size
-  - Shows if EXEFS files are there or not and their size
 - Toggles LayeredFS mods using a safe same-folder rename method
 - Uses cached scanning in the Details view to reduce lag
 - Runs in Applet Mode or Title Override
