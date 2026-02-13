@@ -59,11 +59,13 @@ This method does not delete or modify files it only renames folders.
 ## Expected Folder Layout
 
 Enabled:
+
 sdmc:/atmosphere/contents/<TITLEID>/romfs
 
 sdmc:/atmosphere/contents/<TITLEID>/exefs
 
 Disabled:
+
 sdmc:/atmosphere/contents/<TITLEID>/romfs_disabled
 
 sdmc:/atmosphere/contents/<TITLEID>/exefs_disabled
