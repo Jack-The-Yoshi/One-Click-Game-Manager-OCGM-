@@ -1,4 +1,4 @@
-/* main.c — One Click Game Manager (NCM + Mod Detection + File Count + Size + Toggle + Confirm + ANSI + romfs/exefs Breakdown) */
+/* main.c — One Click Game Manager */
 
 #include <switch.h>
 #include <stdio.h>
@@ -108,10 +108,6 @@ int folderExists(const char* path)
     struct stat st;
     return (stat(path, &st) == 0 && S_ISDIR(st.st_mode));
 }
-
-// ==============================
-// SAME-FOLDER TOGGLE (unchanged)
-// ==============================
 
 int toggleModFolder(const char* titleIdStr, int enable)
 {
@@ -268,10 +264,6 @@ void drawMainUI(void)
 
     printf("\n" ANSI_MAGENTA "A = Details  |  + = Exit" ANSI_RESET "\n");
 }
-
-// ==============================
-// FIXED DETAILS (CACHED SCAN)
-// ==============================
 
 void showDetails(int index)
 {
