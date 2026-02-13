@@ -60,10 +60,12 @@ This method does not delete or modify files it only renames folders.
 
 Enabled:
 sdmc:/atmosphere/contents/<TITLEID>/romfs
+
 sdmc:/atmosphere/contents/<TITLEID>/exefs
 
 Disabled:
 sdmc:/atmosphere/contents/<TITLEID>/romfs_disabled
+
 sdmc:/atmosphere/contents/<TITLEID>/exefs_disabled
 
 ---
@@ -94,6 +96,16 @@ Built with libnx (devkitPro)
 Console interface powered by ANSI escape codes
 
 App made by Jack The Yoshi
+
+### Screenshots
+
+![2026021309182400-4E551BEEBAD303591E38565E64373519](https://github.com/user-attachments/assets/512b24d0-cbc6-473e-96eb-4fa7176bd2ae)
+
+![2026021309182800-4E551BEEBAD303591E38565E64373519](https://github.com/user-attachments/assets/db9534f3-7aa0-4441-a643-38f5d0fef8d5)
+
+![2026021309184500-4E551BEEBAD303591E38565E64373519](https://github.com/user-attachments/assets/785cd93d-e81f-45aa-9117-e55ed2744c90)
+
+![2026021309212100-4E551BEEBAD303591E38565E64373519](https://github.com/user-attachments/assets/36048df4-2697-4882-894b-62a0b3a027ff)
 
 ### Disclaimer
 This application modifies folder names on your SD card.
