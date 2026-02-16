@@ -16,6 +16,7 @@ OCGM is designed to be lightweight, fast, and easy to use through a clean consol
   - Mod detection (Enabled / Disabled)
   - Total Mod Size
   - Total File Count
+  - Whether ROMFS or EXEFS is there or not
 - Toggles LayeredFS mods using a safe same-folder rename method
 - Uses cached scanning in the Details view to reduce lag
 - Runs in Applet Mode or Title Override
@@ -108,6 +109,10 @@ App made by Jack The Yoshi
 ![2026021309184500-4E551BEEBAD303591E38565E64373519](https://github.com/user-attachments/assets/785cd93d-e81f-45aa-9117-e55ed2744c90)
 
 ![2026021309212100-4E551BEEBAD303591E38565E64373519](https://github.com/user-attachments/assets/36048df4-2697-4882-894b-62a0b3a027ff)
+
+![2026021615153200-DB1426D1DFD034027CECDE9C2DD914B8](https://github.com/user-attachments/assets/1106cfa3-2c07-42dc-a254-177d95daa702)
+
+![2026021615154800-DB1426D1DFD034027CECDE9C2DD914B8](https://github.com/user-attachments/assets/d17e2d3a-e59d-49d7-806e-12c1361d0888)
 
 ### Disclaimer
 This application modifies folder names on your SD card.
