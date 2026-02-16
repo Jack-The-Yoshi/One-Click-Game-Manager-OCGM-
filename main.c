@@ -154,6 +154,8 @@ int toggleModFolder(const char* titleIdStr, int enable)
 // ---------- NCM ----------
 void scanInstalledGames(void)
 {
+    gameCount = 0;
+
     Result rc = nsInitialize();
     if (R_FAILED(rc))
         return;
@@ -291,8 +293,13 @@ void showDetails(int index)
         snprintf(exefs, MAX_PATH_LEN, "%s/exefs", basePath);
         snprintf(exefs_disabled, MAX_PATH_LEN, "%s/exefs_disabled", basePath);
 
-        int modActive = folderExists(romfs) || folderExists(exefs);
-        int modDisabled = folderExists(romfs_disabled) || folderExists(exefs_disabled);
+        int romfsActive = folderExists(romfs);
+        int romfsDisabled = folderExists(romfs_disabled);
+        int exefsActive = folderExists(exefs);
+        int exefsDisabled = folderExists(exefs_disabled);
+
+        int modActive = romfsActive || exefsActive;
+        int modDisabled = romfsDisabled || exefsDisabled;
 
         if (needsScan && (modActive || modDisabled))
         {
@@ -303,6 +310,25 @@ void showDetails(int index)
         printf(ANSI_BOLD ANSI_CYAN "%s\n\n" ANSI_RESET, games[index].name);
         printf(ANSI_YELLOW "Title ID: " ANSI_WHITE "%s\n" ANSI_RESET, titleIdStr);
         printf(ANSI_YELLOW "Version:  " ANSI_WHITE "%s\n\n" ANSI_RESET, games[index].version);
+
+        // --- NEW romfs / exefs Status Display ---
+        printf(ANSI_CYAN "romfs:  ");
+        if (romfsActive)
+            printf(ANSI_GREEN "Present (Enabled)\n" ANSI_RESET);
+        else if (romfsDisabled)
+            printf(ANSI_YELLOW "Present (Disabled)\n" ANSI_RESET);
+        else
+            printf(ANSI_RED "Not Found\n" ANSI_RESET);
+
+        printf(ANSI_CYAN "exefs:  ");
+        if (exefsActive)
+            printf(ANSI_GREEN "Present (Enabled)\n" ANSI_RESET);
+        else if (exefsDisabled)
+            printf(ANSI_YELLOW "Present (Disabled)\n" ANSI_RESET);
+        else
+            printf(ANSI_RED "Not Found\n" ANSI_RESET);
+
+        printf("\n");
 
         if (modActive || modDisabled)
         {
@@ -346,7 +372,7 @@ void showDetails(int index)
 
                 int success = toggleModFolder(titleIdStr, modDisabled);
 
-                needsScan = 1; // force rescan after toggle
+                needsScan = 1;
 
                 ansiClearHome();
                 if (success)
